@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #32297c;
+  --accent: #ffc37c;
+  --background: #f0eff8;
+  --foreground: #1f2937;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-montserrat);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
+}
+
+/* Custom utility classes */
+.btn-primary {
+  @apply bg-[#32297c] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#272063] transition-colors duration-200;
+}
+
+.btn-accent {
+  @apply bg-[#ffc37c] text-[#32297c] px-6 py-3 rounded-xl font-semibold hover:bg-[#ffb55c] transition-colors duration-200;
+}
+
+.btn-whatsapp {
+  @apply bg-[#25D366] text-white px-6 py-4 rounded-xl font-semibold hover:bg-[#1da851] transition-colors duration-200 inline-flex items-center gap-2;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
