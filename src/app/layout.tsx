@@ -18,34 +18,89 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sahayakji.in"),
-  title: "SahayakJi - Find Trusted Local Workers in Minutes",
-  description: "Connect with verified local workers for all your home services. Electricians, plumbers, painters, carpenters, AC repair, and home cleaning services available near you. Fast, affordable, and trusted by local households.",
-  keywords: ["home services", "electrician", "plumber", "painter", "carpenter", "AC repair", "home cleaning", "local workers", "trusted workers", "SahayakJi"],
-  authors: [{ name: "SahayakJi" }],
+
+  title: {
+    default: "SahayakJi - Find Trusted Local Workers in Minutes",
+    template: "%s | SahayakJi",
+  },
+
+  description:
+    "Find trusted local workers for home services like electrician, plumber, carpenter, painter, AC repair and cleaning. Book nearby workers quickly via WhatsApp.",
+
+  keywords: [
+    "electrician near me",
+    "plumber near me",
+    "carpenter near me",
+    "painter near me",
+    "AC repair near me",
+    "home cleaning near me",
+    "ghar ka kaam worker",
+    "ghar ka kaam karne wala",
+    "local electrician India",
+    "local plumber India",
+    "trusted home services",
+    "house repair services",
+    "home maintenance services",
+    "Nashik electrician",
+    "Nashik plumber",
+    "urban company alternative",
+    "home service marketplace",
+  ],
+
+  authors: [{ name: "SahayakJi Team" }],
   creator: "SahayakJi",
   publisher: "SahayakJi",
-  robots: "index, follow",
+
+  category: "Home Services",
+
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  alternates: {
+    canonical: "https://sahayakji.in",
+  },
+
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://sahayakji.in",
     siteName: "SahayakJi",
-    title: "SahayakJi - Find Trusted Local Workers in Minutes",
-    description: "Connect with verified local workers for all your home services. Electricians, plumbers, painters, carpenters and more available near you.",
+    title: "SahayakJi - Trusted Local Workers Near You",
+    description:
+      "Find electricians, plumbers, carpenters and cleaners near you instantly. Fast response and verified workers.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "SahayakJi - Trusted Local Home Services",
+        alt: "SahayakJi Home Services",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "SahayakJi - Find Trusted Local Workers in Minutes",
-    description: "Connect with verified local workers for all your home services. Electricians, plumbers, painters, carpenters and more available near you.",
+    title: "SahayakJi - Trusted Local Workers Near You",
+    description:
+      "Find electricians, plumbers, carpenters and cleaners near you instantly.",
     images: ["/og-image.png"],
+  },
+
+  other: {
+    "geo.region": "IN",
+    "geo.placename": "India",
+    "distribution": "global",
+    "rating": "general",
   },
 };
 
